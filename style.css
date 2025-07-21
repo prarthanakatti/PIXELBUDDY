@@ -1,16 +1,17 @@
 /* Background & Typography */
 body {
   background-color: #B19CD9; /* Lavender theme */
-  background-image: url('pokeball.png'); /* optional background pattern */
+  background-image: url('pokeball.png'); /* relative path */
   background-repeat: repeat;
   background-size: 200px;
   font-family: 'Pixelify Sans', cursive;
   text-align: center;
   padding: 2rem;
+  margin: 0;
   transition: all 0.3s ease;
 }
 
-/* Banner Image Styling */
+/* Logo Image */
 .logo-banner {
   margin-bottom: 1.5rem;
 }
@@ -20,7 +21,7 @@ body {
   width: 100%;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
 /* Page Title */
@@ -28,10 +29,10 @@ body {
   font-size: 36px;
   font-weight: bold;
   color: #222;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Login Box Styling */
+/* Login Box */
 .login-box {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 2rem;
@@ -65,10 +66,30 @@ button {
   transition: 0.3s ease;
 }
 
-/* Hover Effects */
+/* Hover Effect */
 button:hover {
   background-color: #339CFF;
   box-shadow: 0 0 10px #339CFF;
 }
+
+/* Focus Effects for Accessibility */
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #339CFF;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+}
+
 
 
